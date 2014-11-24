@@ -1,0 +1,48 @@
+<!doctype HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="HTML5 nonogram puzzle game">
+	<style>
+		#main {
+			text-align: center;
+		}
+
+		#explanationDiv {
+			width: 512px;
+			left: 50%;
+			margin: 0 auto;
+			border: 3px solid;
+			padding: 4px;
+			text-align: left;
+			background-color: rgb(238, 237, 143);
+		}
+
+		#wrapper {
+			border: 4px solid #000;
+			background-color: white;
+			width: 241px;
+			padding: 0.75em;
+			margin: auto;
+			margin-bottom: 0.5em;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<button id="explanationButton">Explanation</button><br>
+		<div id="explanationDiv" hidden="true">
+			<p>This is a <a href="https://en.wikipedia.org/wiki/Nonogram">Nonogram</a> puzzle.
+			<p>Click to fill cells. Crosses represent known empty cells.
+			<p>The grid is randomly generated every time you load the page.
+		</div><br>
+		<div id="wrapper">
+			<canvas id="nonogramCanvas">No canvas support.</canvas><br>
+		</div>
+		<button id="solveButton">Solve</button><br>
+	</div>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/nonogram.js"></script>
+</body>
+</html>
